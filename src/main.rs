@@ -8,11 +8,13 @@ fn main() {
     let mut times = 0;
     loop {
         let mut s = String::new();
+        println!("0, 1, 2のうちのいずれかを入力してください");
         io::stdin().read_line(&mut s).expect("文字列を読み取れませんでした");
         let num : usize = match s.trim().parse::<usize>() {
             Ok(x) => {
                 if x > 2 {
-                    continue
+                    println!("0, 1, 2のうちのいずれかを入力してください");
+                    continue;
                 } else {
                     x
                 }
